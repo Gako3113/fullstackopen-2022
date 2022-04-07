@@ -1,21 +1,24 @@
-// component 定義
-const Hello = () => {
+// component props 定義
+const Hello = (props) => {
   return (
     <div>
-      <p>Hello world</p>
+      Hello {props.name}, you are {props.age} years old
     </div>
   )
 }
 
 const App = () => {
+  const name = 'Peter'
+  const age = 10
+
   return (
-    <div>
+    <>
       <h1>Greetings</h1>
-      {/* component 何度も使える */}
-      <Hello />
-      <Hello />
-      <Hello />
-    </div>
+      <Hello name="George" />
+      <Hello name="Daisy" />
+      <Hello name="Maya" age={26 + 10} />
+      <Hello name={name} age={age} />
+    </>
   )
 }
 
