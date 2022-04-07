@@ -1,4 +1,4 @@
-{/* componentの定義 */}
+// component 定義
 const Hello = () => {
   return (
     <div>
